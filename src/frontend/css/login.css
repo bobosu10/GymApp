@@ -119,16 +119,17 @@ body {
     appearance: none;
     -webkit-appearance: none;
 
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 
-    border: 2px solid;
+    border: 2px solid #F54927;
     border-radius: 5px;
 
     cursor: pointer;
     position: relative;
 
     transition: 0.3s;
+    
 }
 
 #rememberMe:checked {
@@ -149,6 +150,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
 .input-user,
 .input-password {
     position: relative;
@@ -167,7 +169,7 @@ body {
 .imageSection {
     width: 50%;
     position: relative;
-}g
+}
 
 .appName {
     position: absolute;
