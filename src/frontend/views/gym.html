@@ -12,8 +12,8 @@
             <h1 id="dashboard-title">ACAD</h1>
             <nav class="dashboard-nav">
                 <ul class="dashboard-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">gym</a></li>
+                    <li><a href="dashboard.html">Home</a></li>
+                    <li><a href="gym.html">gym</a></li>
                     <li><a href="#">Run</a></li>
                     <li><a href="#">Configurações</a></li>
                 </ul>
@@ -28,18 +28,92 @@
 
         <div class="main-content">
             <div class="left-side">
-                
+                <div class="carousel-wrapper">
+                    <h2 class="carousel-title">MEUS TREINOS</h2>
+                    <div class="carousel-scene">
+                        <div class="carousel-track" id="carouselTrack">
 
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="prevBtn" aria-label="Anterior">&#8592;</button>
+                        <span class="carousel-indicator" id="carouselIndicator"></span>
+                        <button class="carousel-btn" id="nextBtn" aria-label="Próximo">&#8594;</button>
+                    </div>
+                    <button class="add-treino-btn" id="addTreinoBtn">+ ADICIONAR TREINO</button>
+                </div>
             </div>
+
             <div class="right-side">
+                <h3 class="sugestao-label">SUGESTÃO DE TREINO</h3>
                 <section class="treino-sugerido">
-                    <img src="../assets/sugest1.jpg" alt="FreakySeason">
+                    <div class="sugestao-slider" id="sugestaoSlider">
+                        <div class="sugestao-slide active" data-index="0">
+                            <img src="../assets/FreakySeason.png" alt="Freaky Season">
+                            <div class="sugestao-overlay">
+                                <span class="sugestao-nome">FREAKY SEASON</span>
+                                <span class="sugestao-desc">Hipertrofia · Alta Intensidade</span>
+                                <button class="sugestao-add-btn" data-nome="FREAKY SEASON" data-desc="Hipertrofia · Alta Intensidade" data-cor="#C0392B">+ ADICIONAR AO CARROSSEL</button>
+                            </div>
+                        </div>
+                        <div class="sugestao-slide" data-index="1">
+                            <img src="../assets/Dino.png" alt="Dino">
+                            <div class="sugestao-overlay">
+                                <span class="sugestao-nome">DINO</span>
+                                <span class="sugestao-desc">Força · Resistência</span>
+                                <button class="sugestao-add-btn" data-nome="DINO" data-desc="Força · Resistência" data-cor="#27AE60">+ ADICIONAR AO CARROSSEL</button>
+                            </div>
+                        </div>
+                        <div class="sugestao-slide" data-index="2">
+                            <img src="../assets/AllDay.png" alt="All Day">
+                            <div class="sugestao-overlay">
+                                <span class="sugestao-nome">ALL DAY</span>
+                                <span class="sugestao-desc">Funcional · Full Body</span>
+                                <button class="sugestao-add-btn" data-nome="ALL DAY" data-desc="Funcional · Full Body" data-cor="#2980B9">+ ADICIONAR AO CARROSSEL</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sugestao-dots" id="sugestaoDots">
+                        <span class="sugestao-dot active" data-idx="0"></span>
+                        <span class="sugestao-dot" data-idx="1"></span>
+                        <span class="sugestao-dot" data-idx="2"></span>
+                    </div>
                 </section>
-                <h3>sugestao de treino</h3>
             </div>
         </div>
 
     </div>  
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <h2 class="modal-title">NOVO TREINO</h2>
+            <div class="modal-field">
+                <label>Nome do Treino</label>
+                <input type="text" id="inputNome" placeholder="Ex: Treino A — Peito e Tríceps" />
+            </div>
+            <div class="modal-field">
+                <label>Descrição</label>
+                <textarea id="inputDesc" placeholder="Ex: 4x Supino, 3x Crucifixo..."></textarea>
+            </div>
+            <div class="modal-field">
+                <label>Cor</label>
+                <div class="color-picker" id="colorPicker">
+                    <span class="color-dot selected" data-color="#C0392B" style="background:#C0392B;"></span>
+                    <span class="color-dot" data-color="#E67E22" style="background:#E67E22;"></span>
+                    <span class="color-dot" data-color="#27AE60" style="background:#27AE60;"></span>
+                    <span class="color-dot" data-color="#2980B9" style="background:#2980B9;"></span>
+                    <span class="color-dot" data-color="#8E44AD" style="background:#8E44AD;"></span>
+                    <span class="color-dot" data-color="#F39C12" style="background:#F39C12;"></span>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-cancel" id="modalCancel">CANCELAR</button>
+                <button class="modal-save" id="modalSave">SALVAR</button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="../js/gym.js"></script>
     
 </body>
 </html>
